@@ -50,10 +50,19 @@ public class Main {
 			double a=q6(n1-n2,n2);
 			return a;
 		}
-		
+		public static boolean q7(int x, int y) {//x is bigger number
+			if (x-y==0) {
+				return true;
+			}
+			if (x-y<0) {
+				return false;
+			}
+			boolean a=q7(x-y,y);
+			return a;
+		}
 
 	public static void main(String[] args) {
-		System.out.println(q6(10,6));
+		System.out.println(q1(6));
 	}
 
 }
