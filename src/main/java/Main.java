@@ -60,9 +60,20 @@ public class Main {
 			boolean a=q7(x-y,y);
 			return a;
 		}
+		public static boolean q8(int n, int z) {//z=n-1
+			if (z<=1) {
+				return true;
+			}
+			if (n%z==0) {
+				return false;
+			}
+			z--;
+			boolean a=q8(n,z);
+			return a;
+		}
 
 	public static void main(String[] args) {
-		System.out.println(q1(6));
+		System.out.println(q8(89,89-1));
 	}
 
 }
